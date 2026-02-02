@@ -139,6 +139,7 @@ Or like this if the is a validation error:
 - You must answer with the right type (BOOLEAN, TEXT or NUMBER).
 - To be eligible for prescription you must submit `true` to `questionId` 2 (Are you more than 18 years old?).
 - To be eligible for prescription you must submit `false` to `questionId` 3 (Have you ever had an adverse reaction to the product?).
+- To be eligible for prescription you must submit a weight that is at least 60Kg to `questionId` 4 (How much do you weight?).
 
 ## Decisions and trade-offs
 Given the 2–3 hour time constraint, I focused mainly on  delivering the basic working API based on the requirements. 
