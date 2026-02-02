@@ -25,9 +25,38 @@ The application runs on http://localhost:8080 by default. Change the port number
 - GET /heliosx/consultation/questions
 - POST /heliosx/consultation/answers
 
-To see and test all the endpoints you can visit the [link to the Postman collection](https://zhrfrd-9442626.postman.co/workspace/zhrfrd's-Workspace~f01c425e-37ae-41ba-8eb8-d39081ac6f1d/collection/51937494-12d990d3-f58a-48e9-a491-1976d0ba28ae?action=share&source=copy-link&creator=51937494).
+To see and test all the endpoints you can visit the [link to the Postman collection](https://zhrfrd-9442626.postman.co/workspace/zhrfrd's-Workspace~f01c425e-37ae-41ba-8eb8-d39081ac6f1d/collection/51937494-12d990d3-f58a-48e9-a491-1976d0ba28ae?action=share&source=copy-link&creator=51937494) or copy and paste the following curl commands:
 
-## How to get the questionnaire
+GET questions
+```
+curl -X GET http://localhost:8080/heliosx/consultation/questions
+```
+
+POST answers
+```
+curl -X POST http://localhost:8080/heliosx/consultation/answers \
+  -H "Content-Type: application/json" \
+  -d '[
+        {
+          "questionId": "1",
+          "answer": "Farid"
+        },
+        {
+          "questionId": "2",
+          "answer": "true"
+        },
+        {
+          "questionId": "3",
+          "answer": "3"
+        },
+        {
+          "questionId": "4",
+          "answer": "40"
+        }
+      ]'
+```
+
+## How to get the questionnaire using Postman
 
 - Run the app.
 - Open Postman and run "GET questions" request.
@@ -58,7 +87,7 @@ To see and test all the endpoints you can visit the [link to the Postman collect
 ]
 ```
 
-## How to post your answers
+## How to post your answers using Postman
 
 - Run the app.
 - Open Postman and run "POST answers" request.
