@@ -107,6 +107,7 @@ Or like this if the is a validation error:
 ## Validations
 - You cannot skip any answer. 
 - You must answer all the questions without leaving `questionId` or `answer` fields blank.
+- You must answer with the right type (BOOLEAN, TEXT or NUMBER).
 - To be eligible for prescription you must submit `true` to `questionId` 2 (Are you more than 18 years old?).
 - To be eligible for prescription you must submit `false` to `questionId` 3 (Have you ever had an adverse reaction to the product?).
 
